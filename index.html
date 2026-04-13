@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kiyani Sourcing — Your trusted China sourcing agent based in Guangzhou. Serving UK and Pakistani importers with factory verification, quality control, and Canton Fair guidance.">
+    <meta name="description" content="Kiyani Sourcing — Your trusted China sourcing agent based in Guangzhou. Serving UK, GCC and Pakistani importers with factory verification, quality control, and Canton Fair guidance.">
     <title>Kiyani Sourcing | Your Eyes on the Ground in China</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,6 @@
             overflow-x: hidden;
         }
 
-        /* ─── SCROLLBAR ─── */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -185,7 +184,7 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: 
+            background:
                 radial-gradient(ellipse at 20% 50%, rgba(204,0,0,0.12) 0%, transparent 60%),
                 radial-gradient(ellipse at 80% 20%, rgba(204,0,0,0.08) 0%, transparent 50%);
         }
@@ -193,7 +192,7 @@
         .hero-grid {
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(204,0,0,0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(204,0,0,0.04) 1px, transparent 1px);
             background-size: 60px 60px;
@@ -337,7 +336,6 @@
             line-height: 1.4;
         }
 
-        /* Hero Right — Visual Card */
         .hero-visual {
             position: relative;
         }
@@ -554,9 +552,200 @@
             margin-bottom: 60px;
         }
 
+        /* ─── MARKETS SECTION ─── */
+        .markets {
+            background: var(--dark);
+        }
+
+        .markets-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .market-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .market-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .market-card:hover {
+            border-color: rgba(204,0,0,0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .market-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .market-flag {
+            font-size: 52px;
+            margin-bottom: 20px;
+            display: block;
+            line-height: 1;
+        }
+
+        .market-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .market-card .market-sub {
+            font-size: 13px;
+            color: var(--red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .market-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .market-targets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .market-targets li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .market-targets li i {
+            color: var(--red);
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        .market-advantage {
+            margin-top: 24px;
+            padding: 16px;
+            background: rgba(204,0,0,0.08);
+            border: 1px solid rgba(204,0,0,0.2);
+            border-radius: 10px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+        }
+
+        .market-advantage strong {
+            color: var(--red);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ─── UAE ADVANTAGE BANNER ─── */
+        .uae-banner {
+            background: linear-gradient(135deg, rgba(204,0,0,0.12), rgba(204,0,0,0.04));
+            border: 1px solid rgba(204,0,0,0.25);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .uae-banner-left {
+            grid-column: span 2;
+        }
+
+        .uae-banner-left h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .uae-banner-left p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+        }
+
+        .uae-banner-points {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .uae-point {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .uae-point i {
+            color: var(--red);
+            font-size: 14px;
+            width: 18px;
+        }
+
+        .uae-banner-right {
+            text-align: center;
+            padding: 24px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .uae-banner-right .flag-big {
+            font-size: 56px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .uae-banner-right h4 {
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .uae-banner-right p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.5;
+        }
+
         /* ─── ABOUT ─── */
         .about {
-            background: var(--dark);
+            background: var(--black);
         }
 
         .about-grid {
@@ -566,69 +755,66 @@
             align-items: center;
         }
 
-        .about-image-block {
-            position: relative;
-        }
-
-        .about-photo-placeholder {
-            width: 100%;
-            aspect-ratio: 4/5;
-            background: var(--dark-2);
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.08);
+        .about-presence {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            color: rgba(255,255,255,0.25);
-            font-size: 14px;
+            gap: 20px;
+        }
+
+        .presence-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+            padding: 28px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
 
-        .about-photo-placeholder::before {
+        .presence-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--red), transparent);
+            bottom: 0;
+            width: 3px;
+            background: var(--red);
         }
 
-        .about-photo-placeholder i {
-            font-size: 60px;
-            color: rgba(255,255,255,0.1);
+        .presence-card:hover {
+            border-color: rgba(204,0,0,0.25);
+            transform: translateX(6px);
         }
 
-        .about-location-tag {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            background: rgba(10,10,10,0.9);
-            border: 1px solid rgba(204,0,0,0.3);
-            border-radius: 10px;
-            padding: 12px 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .presence-flag {
+            font-size: 40px;
+            flex-shrink: 0;
+            line-height: 1;
         }
 
-        .about-location-tag i {
+        .presence-info h4 {
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .presence-info .presence-role {
+            font-size: 12px;
             color: var(--red);
-            font-size: 18px;
-        }
-
-        .about-location-tag span {
-            font-size: 13px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
         }
 
-        .about-location-tag small {
-            display: block;
-            font-size: 11px;
-            color: rgba(255,255,255,0.4);
+        .presence-info p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
         }
 
         .about-content h2 {
@@ -688,7 +874,7 @@
 
         /* ─── SERVICES ─── */
         .services {
-            background: var(--black);
+            background: var(--dark);
         }
 
         .services-grid {
@@ -802,7 +988,7 @@
 
         /* ─── HOW IT WORKS ─── */
         .how-it-works {
-            background: var(--dark);
+            background: var(--black);
         }
 
         .steps-grid {
@@ -868,7 +1054,7 @@
 
         /* ─── WHY CHOOSE US ─── */
         .why-us {
-            background: var(--black);
+            background: var(--dark);
         }
 
         .why-grid {
@@ -958,7 +1144,6 @@
             justify-content: center;
             margin: 0 auto 24px;
             font-size: 44px;
-            color: var(--red);
         }
 
         .why-big-card h3 {
@@ -1002,7 +1187,7 @@
 
         /* ─── CANTON FAIR ─── */
         .canton-fair {
-            background: var(--dark);
+            background: var(--black);
             position: relative;
             overflow: hidden;
         }
@@ -1128,7 +1313,7 @@
 
         /* ─── INDUSTRIES ─── */
         .industries {
-            background: var(--black);
+            background: var(--dark);
         }
 
         .industries-grid {
@@ -1173,78 +1358,7 @@
 
         /* ─── TESTIMONIALS ─── */
         .testimonials {
-            background: var(--dark);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .testimonial-card {
-            background: var(--dark-2);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 16px;
-            padding: 32px 28px;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            border-color: rgba(204,0,0,0.2);
-            transform: translateY(-4px);
-        }
-
-        .quote-icon {
-            font-size: 40px;
-            color: rgba(204,0,0,0.2);
-            line-height: 1;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.75;
-            margin-bottom: 24px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .author-avatar {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, var(--red), var(--red-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .author-info h5 {
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .author-info span {
-            font-size: 12px;
-            color: rgba(255,255,255,0.45);
-        }
-
-        .stars {
-            color: #FFB800;
-            font-size: 12px;
-            margin-bottom: 4px;
+            background: var(--black);
         }
 
         .coming-soon-banner {
@@ -1267,7 +1381,7 @@
 
         /* ─── FAQ ─── */
         .faq {
-            background: var(--black);
+            background: var(--dark);
         }
 
         .faq-grid {
@@ -1379,7 +1493,7 @@
 
         /* ─── CONTACT ─── */
         .contact {
-            background: var(--dark);
+            background: var(--black);
         }
 
         .contact-grid {
@@ -1455,7 +1569,6 @@
             font-weight: 600;
         }
 
-        /* Contact Form */
         .contact-form-box {
             background: var(--dark-2);
             border: 1px solid rgba(255,255,255,0.08);
@@ -1739,132 +1852,44 @@
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .markets-grid { grid-template-columns: 1fr; }
+            .uae-banner { grid-template-columns: 1fr; }
+            .uae-banner-left { grid-column: span 1; }
         }
 
         @media (max-width: 768px) {
-            section {
-                padding: 70px 0;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                padding: 100px 24px 60px;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .about-grid,
-            .why-grid,
-            .canton-grid,
-            .faq-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .steps-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .steps-grid::before {
-                display: none;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .section-container {
-                padding: 0 24px;
-            }
-
-            .nav-container {
-                padding: 0 24px;
-            }
-
-            .trust-bar-inner {
-                padding: 0 24px;
-                gap: 16px;
-            }
-
-            .trust-item {
-                font-size: 12px;
-            }
-
-            .footer-bottom {
-                padding: 20px 24px 0;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary, .btn-secondary {
-                justify-content: center;
-            }
-
-            .contact-form-box {
-                padding: 28px 24px;
-            }
-
-            .why-big-card {
-                padding: 28px 24px;
-            }
+            section { padding: 70px 0; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero-container { grid-template-columns: 1fr; gap: 50px; padding: 100px 24px 60px; }
+            .hero-stats { grid-template-columns: repeat(3, 1fr); }
+            .about-grid, .why-grid, .canton-grid, .faq-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .steps-grid::before { display: none; }
+            .services-grid { grid-template-columns: 1fr; }
+            .markets-grid { grid-template-columns: 1fr; }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .section-container { padding: 0 24px; }
+            .nav-container { padding: 0 24px; }
+            .trust-bar-inner { padding: 0 24px; gap: 16px; }
+            .trust-item { font-size: 12px; }
+            .footer-bottom { padding: 20px 24px 0; flex-direction: column; text-align: center; }
+            .hero-buttons { flex-direction: column; }
+            .btn-primary, .btn-secondary { justify-content: center; }
+            .contact-form-box { padding: 28px 24px; }
+            .why-big-card { padding: 28px 24px; }
+            .uae-banner { padding: 24px; }
         }
 
         @media (max-width: 480px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .industries-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-stats { grid-template-columns: 1fr; gap: 16px; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .industries-grid { grid-template-columns: 1fr; }
         }
 
         /* ─── ANIMATIONS ─── */
@@ -1894,11 +1919,12 @@
             <div class="logo-icon">KS</div>
             <div class="logo-text">
                 <span>Kiyani Sourcing</span>
-                <span>Guangzhou, China</span>
+                <span>Guangzhou · Dubai · Pakistan</span>
             </div>
         </a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#markets">Markets</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#canton-fair">Canton Fair</a></li>
@@ -1917,6 +1943,7 @@
 <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
     <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#markets" onclick="toggleMenu()">Markets</a>
     <a href="#services" onclick="toggleMenu()">Services</a>
     <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
     <a href="#canton-fair" onclick="toggleMenu()">Canton Fair</a>
@@ -1932,17 +1959,17 @@
         <div class="hero-left">
             <div class="hero-badge">
                 <i class="fas fa-circle"></i>
-                Live & Based in Guangzhou, China
+                Guangzhou Based · UAE Access · Pakistan Roots
             </div>
             <h1 class="hero-title">
                 Your Eyes on<br>the Ground
                 <span class="accent">in China.</span>
             </h1>
             <p class="hero-subtitle">
-                Kiyani Sourcing connects UK and Pakistani importers with verified Chinese manufacturers. Factory visits, quality control, and supplier negotiation — done by someone physically on the ground.
+                Kiyani Sourcing connects UK, GCC, and Pakistani importers with verified Chinese manufacturers. Company registered in Guangzhou, UAE banking available, and deep roots across Pakistan — factory visits, quality control, and supplier negotiation handled by someone physically on the ground.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">
+                <a href="https://wa.me/447775412819" target="_blank" class="btn-primary">
                     <i class="fab fa-whatsapp"></i>
                     Start Sourcing Today
                 </a>
@@ -1957,12 +1984,12 @@
                     <div class="stat-label">Amazon FBA & TikTok Shop Sellers</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">PK</div>
-                    <div class="stat-label">Pakistani Importers & Traders</div>
+                    <div class="stat-number">GCC</div>
+                    <div class="stat-label">UAE, Saudi & Gulf Importers</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">GZ</div>
-                    <div class="stat-label">Physically Based in Guangzhou</div>
+                    <div class="stat-number">PK</div>
+                    <div class="stat-label">Pakistani Importers & Traders</div>
                 </div>
             </div>
         </div>
@@ -1975,7 +2002,7 @@
                         <p>Founder & China Sourcing Agent</p>
                         <div class="location">
                             <i class="fas fa-map-marker-alt"></i>
-                            Guangzhou, China
+                            Guangzhou 🇨🇳 · Dubai 🇦🇪 · Pakistan 🇵🇰
                         </div>
                     </div>
                 </div>
@@ -2000,11 +2027,11 @@
                     </div>
                     <div class="card-feature">
                         <div class="card-feature-icon">
-                            <i class="fas fa-handshake"></i>
+                            <i class="fas fa-university"></i>
                         </div>
                         <div>
-                            <div class="card-feature-text">Supplier Negotiation</div>
-                            <div class="card-feature-sub">Face-to-face, in Mandarin</div>
+                            <div class="card-feature-text">UAE Banking Available</div>
+                            <div class="card-feature-sub">Secure payments through Dubai bank account</div>
                         </div>
                     </div>
                     <div class="card-feature">
@@ -2031,19 +2058,19 @@
     <div class="trust-bar-inner">
         <div class="trust-item">
             <i class="fas fa-check-circle"></i>
-            Physically Based in Guangzhou
+            Registered Company in Guangzhou
         </div>
         <div class="trust-item">
             <i class="fas fa-check-circle"></i>
-            Serving UK & Pakistani Importers
+            UAE Residency & Banking Access
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            Serving UK, GCC & Pakistan
         </div>
         <div class="trust-item">
             <i class="fas fa-check-circle"></i>
             No Supplier Commissions — Ever
-        </div>
-        <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            WhatsApp Direct Access
         </div>
         <div class="trust-item">
             <i class="fas fa-check-circle"></i>
@@ -2052,35 +2079,134 @@
     </div>
 </div>
 
+<!-- ─── MARKETS ─── -->
+<section class="markets" id="markets">
+    <div class="section-container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag" style="justify-content:center; display:flex;">Markets We Serve</div>
+            <h2 class="section-title" style="text-align:center;">Three Markets. One Trusted Agent.</h2>
+            <p class="section-subtitle" style="margin:0 auto; text-align:center;">We understand the buying expectations, business culture, and import requirements of each market we serve — no guesswork, no generics.</p>
+        </div>
+        <div class="markets-grid">
+            <div class="market-card fade-in">
+                <span class="market-flag">🇬🇧</span>
+                <h3>United Kingdom</h3>
+                <div class="market-sub">UK Market</div>
+                <p>Serving Amazon FBA sellers, TikTok Shop UK sellers, independent retailers, and UK-based Pakistani diaspora businesses importing consumer goods from China.</p>
+                <ul class="market-targets">
+                    <li><i class="fas fa-circle"></i> Amazon FBA sellers sourcing 1–5 products</li>
+                    <li><i class="fas fa-circle"></i> TikTok Shop UK sellers needing low MOQ runs</li>
+                    <li><i class="fas fa-circle"></i> Independent UK retailers — fitness, pet, homewares</li>
+                    <li><i class="fas fa-circle"></i> UK Pakistani diaspora businesses</li>
+                </ul>
+                <div class="market-advantage">
+                    <strong>Our Edge for UK Buyers</strong>
+                    We understand UK consumer standards, Amazon listing requirements, and the expectations of British retailers — we source to that standard, not just the cheapest option.
+                </div>
+            </div>
+            <div class="market-card fade-in fade-in-delay-1">
+                <span class="market-flag">🇦🇪</span>
+                <h3>GCC & Middle East</h3>
+                <div class="market-sub">UAE · Saudi · Qatar · Kuwait · Oman · Bahrain</div>
+                <p>Serving GCC-based traders and importers through our UAE residency and Dubai banking channel — making China sourcing trusted, accessible, and professionally managed for Gulf buyers.</p>
+                <ul class="market-targets">
+                    <li><i class="fas fa-circle"></i> UAE-based traders importing from China</li>
+                    <li><i class="fas fa-circle"></i> Saudi and Gulf importers needing a verified agent</li>
+                    <li><i class="fas fa-circle"></i> GCC businesses attending Canton Fair</li>
+                    <li><i class="fas fa-circle"></i> Dubai re-exporters sourcing for African & Asian markets</li>
+                </ul>
+                <div class="market-advantage">
+                    <strong>Our Edge for GCC Buyers</strong>
+                    UAE residency and a regulated Dubai bank account means you pay through a trusted UAE channel — not direct to China. We bridge the Gulf-China trade corridor with real presence on both sides.
+                </div>
+            </div>
+            <div class="market-card fade-in fade-in-delay-2">
+                <span class="market-flag">🇵🇰</span>
+                <h3>Pakistan</h3>
+                <div class="market-sub">PK Market</div>
+                <p>Deep roots in Pakistani business culture and a thorough understanding of how Pakistani traders import, negotiate, and operate — making us the natural choice for Pakistan-based importers sourcing from China.</p>
+                <ul class="market-targets">
+                    <li><i class="fas fa-circle"></i> Pakistani importers buying consumer goods</li>
+                    <li><i class="fas fa-circle"></i> Traders planning Canton Fair visits</li>
+                    <li><i class="fas fa-circle"></i> Pakistani entrepreneurs launching brands from China</li>
+                    <li><i class="fas fa-circle"></i> Wholesale traders sourcing for domestic retail</li>
+                </ul>
+                <div class="market-advantage">
+                    <strong>Our Edge for Pakistani Buyers</strong>
+                    We understand Pakistani import culture, business expectations, and the Canton Fair landscape better than any Western sourcing agent. This is our home market and we treat it that way.
+                </div>
+            </div>
+        </div>
+
+        <!-- UAE Advantage Banner -->
+        <div class="uae-banner fade-in">
+            <div class="uae-banner-left">
+                <h3>🇦🇪 Why Our UAE Presence Matters to Every Buyer</h3>
+                <p>Whether you are buying from the UK, Pakistan, or anywhere in the GCC — our UAE residency and Dubai bank account gives you a secure, familiar, and regulated way to pay for your sourcing services. No wire transfers to unknown Chinese accounts. No risk.</p>
+                <div class="uae-banner-points">
+                    <div class="uae-point">
+                        <i class="fas fa-check-circle"></i>
+                        Pay through a regulated UAE bank — trusted by buyers worldwide
+                    </div>
+                    <div class="uae-point">
+                        <i class="fas fa-check-circle"></i>
+                        UAE residency visa confirms we are a legitimate, verified individual
+                    </div>
+                    <div class="uae-point">
+                        <i class="fas fa-check-circle"></i>
+                        Can meet GCC-based clients in Dubai for face-to-face consultations
+                    </div>
+                    <div class="uae-point">
+                        <i class="fas fa-check-circle"></i>
+                        Dubai is the gateway between China, the Gulf, and Pakistan — we sit right on that corridor
+                    </div>
+                </div>
+            </div>
+            <div class="uae-banner-right">
+                <span class="flag-big">🏙️</span>
+                <h4>Dubai Access</h4>
+                <p>UAE Residency · Dubai Bank Account · GCC Meeting Point</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ─── ABOUT ─── -->
 <section class="about" id="about">
     <div class="section-container">
         <div class="about-grid">
-            <div class="about-image-block fade-in">
-                <div class="about-photo-placeholder">
-                    <i class="fas fa-user"></i>
-                    <span>Photo Coming Soon</span>
+            <div class="about-presence fade-in">
+                <div class="presence-card">
+                    <div class="presence-flag">🇨🇳</div>
+                    <div class="presence-info">
+                        <h4>Guangzhou, China</h4>
+                        <span class="presence-role">Primary Base · Registered Company</span>
+                        <p>Physically on the ground in Guangzhou — the world's manufacturing capital. Factory visits, supplier meetings, and quality inspections done in person every day.</p>
+                    </div>
                 </div>
-                <div class="about-location-tag">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <span>Guangzhou, China</span>
-                        <small>On the ground — right now</small>
+                <div class="presence-card">
+                    <div class="presence-flag">🇦🇪</div>
+                    <div class="presence-info">
+                        <h4>Dubai, UAE</h4>
+                        <span class="presence-role">UAE Residency · Dubai Bank Account</span>
+                        <p>UAE residency visa and a regulated Dubai bank account — giving GCC, UK, and Pakistani buyers a trusted, secure payment channel and a face-to-face meeting point in the Gulf.</p>
+                    </div>
+                </div>
+                <div class="presence-card">
+                    <div class="presence-flag">🇵🇰</div>
+                    <div class="presence-info">
+                        <h4>Pakistan</h4>
+                        <span class="presence-role">Home Market · Deep Roots</span>
+                        <p>Born and raised with full understanding of Pakistani business culture, import expectations, and the Canton Fair landscape. The most trusted agent for Pakistan-China trade.</p>
                     </div>
                 </div>
             </div>
             <div class="about-content">
                 <div class="section-tag">About Us</div>
-                <h2>The Sourcing Agent Who's Actually There</h2>
-                <p>
-                    Most sourcing agents operate remotely — they browse Alibaba, send emails, and hope for the best. Kiyani Sourcing is different. I'm Raja Shumail Ali Kiyani, and I'm physically based in Guangzhou, China — the manufacturing capital of the world.
-                </p>
-                <p>
-                    That means I can walk into factories, inspect products with my own hands, negotiate face-to-face with suppliers, and represent your business interests the way only someone on the ground can.
-                </p>
-                <p>
-                    I serve both UK importers and Pakistani traders — understanding the expectations of both markets in a way that very few agents can offer.
-                </p>
+                <h2>Three Countries. One Sourcing Agent You Can Trust.</h2>
+                <p>Most sourcing agents operate from one location and serve one market. I am Raja Shumail Ali Kiyani — and I operate differently. My company is registered in Guangzhou, China. I hold UAE residency with a Dubai bank account. And I have deep roots in Pakistan.</p>
+                <p>That means I can walk into Chinese factories, negotiate face to face, inspect goods with my own hands — and then offer UK, GCC, and Pakistani buyers a secure payment channel through a regulated UAE bank, plus a cultural understanding of each market that no Western agent can match.</p>
+                <p>This is not a remote service. This is a real person, in the real place, doing the real work — for buyers who are too serious to risk sourcing blind.</p>
                 <div class="about-highlights">
                     <div class="highlight-item fade-in fade-in-delay-1">
                         <div class="highlight-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -2090,17 +2216,24 @@
                         </div>
                     </div>
                     <div class="highlight-item fade-in fade-in-delay-2">
-                        <div class="highlight-icon"><i class="fas fa-globe"></i></div>
+                        <div class="highlight-icon"><i class="fas fa-university"></i></div>
                         <div class="highlight-text">
-                            <h4>Dual Market Expert</h4>
-                            <p>Deep understanding of both UK buyer expectations and Pakistani import culture.</p>
+                            <h4>UAE Banking Channel</h4>
+                            <p>Pay securely through our regulated Dubai bank account — trusted by buyers worldwide.</p>
                         </div>
                     </div>
                     <div class="highlight-item fade-in fade-in-delay-3">
+                        <div class="highlight-icon"><i class="fas fa-globe"></i></div>
+                        <div class="highlight-text">
+                            <h4>Three Market Understanding</h4>
+                            <p>UK buyer standards, GCC import expectations, and Pakistani business culture — all in one agent.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item fade-in fade-in-delay-4">
                         <div class="highlight-icon"><i class="fas fa-comments"></i></div>
                         <div class="highlight-text">
                             <h4>WhatsApp-First Communication</h4>
-                            <p>Direct access to me — no ticket systems, no call centres, no delays.</p>
+                            <p>Direct access to Raja — no ticket systems, no call centres, no delays.</p>
                         </div>
                     </div>
                 </div>
@@ -2132,7 +2265,7 @@
             <div class="service-card fade-in fade-in-delay-1">
                 <div class="service-icon"><i class="fas fa-box"></i></div>
                 <h3>Sample Coordination</h3>
-                <p>We order, inspect, and forward product samples to your UK or Pakistan address — before you commit to a full order.</p>
+                <p>We order, inspect, and forward product samples to your UK, UAE, or Pakistan address — before you commit to a full order.</p>
                 <ul class="service-features">
                     <li><i class="fas fa-circle"></i> Sample ordering & payment</li>
                     <li><i class="fas fa-circle"></i> Physical sample inspection</li>
@@ -2240,20 +2373,27 @@
                     </div>
                 </div>
                 <div class="why-card fade-in fade-in-delay-1">
-                    <div class="why-card-icon"><i class="fas fa-users"></i></div>
+                    <div class="why-card-icon"><i class="fas fa-university"></i></div>
                     <div>
-                        <h4>Dual Market Understanding</h4>
-                        <p>We understand UK buyer standards and Pakistani importer needs equally — rare for any single sourcing agent.</p>
+                        <h4>UAE Residency & Secure Banking</h4>
+                        <p>Pay through our regulated Dubai bank account. UAE residency confirms we are a verified, legitimate operation — not an anonymous online agent.</p>
                     </div>
                 </div>
                 <div class="why-card fade-in fade-in-delay-2">
+                    <div class="why-card-icon"><i class="fas fa-users"></i></div>
+                    <div>
+                        <h4>Three Market Understanding</h4>
+                        <p>UK buyer standards, GCC business culture, and Pakistani import expectations — all understood and served equally well.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in fade-in-delay-3">
                     <div class="why-card-icon"><i class="fas fa-ban"></i></div>
                     <div>
                         <h4>No Supplier Commissions</h4>
                         <p>We never take kickbacks from factories. Our only loyalty is to you. That is why buyers trust us.</p>
                     </div>
                 </div>
-                <div class="why-card fade-in fade-in-delay-3">
+                <div class="why-card fade-in fade-in-delay-4">
                     <div class="why-card-icon"><i class="fab fa-whatsapp"></i></div>
                     <div>
                         <h4>WhatsApp-First Communication</h4>
@@ -2263,9 +2403,9 @@
             </div>
             <div class="why-visual fade-in">
                 <div class="why-big-card">
-                    <div class="big-icon">🇨🇳</div>
-                    <h3>Based Where It Matters</h3>
-                    <p>Guangzhou is the manufacturing and trading capital of China. Being here means faster factory access, better supplier relationships, and real-time problem solving — not remote guesswork.</p>
+                    <div class="big-icon">🌍</div>
+                    <h3>China Company. UAE Banking. Three Markets.</h3>
+                    <p>Registered company in Guangzhou. UAE residency and Dubai bank account. Deep roots in Pakistan. Serving importers across the UK, GCC, and Pakistan — with real presence where your products are made.</p>
                     <div class="why-metrics">
                         <div class="metric">
                             <div class="metric-number">£5K+</div>
@@ -2276,8 +2416,8 @@
                             <div class="metric-label">Average response to new enquiries</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-number">2</div>
-                            <div class="metric-label">Markets served — UK & Pakistan</div>
+                            <div class="metric-number">3</div>
+                            <div class="metric-label">Markets — UK, GCC & Pakistan</div>
                         </div>
                         <div class="metric">
                             <div class="metric-number">0</div>
@@ -2298,7 +2438,7 @@
                 <div class="canton-content fade-in">
                     <div class="section-tag">Canton Fair</div>
                     <h2>Coming to Canton Fair? You Need Someone Already There.</h2>
-                    <p>The Canton Fair is the world's largest trade fair — held in Guangzhou twice a year. For Pakistani and UK traders attending or planning to attend, navigating it alone is overwhelming. We offer on-the-ground guidance, factory introductions, and full sourcing support throughout.</p>
+                    <p>The Canton Fair is the world's largest trade fair — held in Guangzhou twice a year. For Pakistani, UK, and GCC traders attending or planning to attend, navigating it alone is overwhelming. We offer on-the-ground guidance, factory introductions, and full sourcing support throughout.</p>
                     <div class="canton-services">
                         <div class="canton-service-item">
                             <i class="fas fa-route"></i>
@@ -2318,10 +2458,10 @@
                         </div>
                         <div class="canton-service-item">
                             <i class="fas fa-hotel"></i>
-                            Local logistics guidance (hotels, transport, areas)
+                            Local logistics guidance — hotels, transport, areas
                         </div>
                     </div>
-                    <a href="#contact" class="btn-primary">
+                    <a href="https://wa.me/447775412819" target="_blank" class="btn-primary">
                         <i class="fas fa-calendar-check"></i>
                         Book Canton Fair Support
                     </a>
@@ -2360,7 +2500,7 @@
         <div class="section-header" style="text-align:center;">
             <div class="section-tag" style="justify-content:center; display:flex;">Industries</div>
             <h2 class="section-title" style="text-align:center;">Product Categories We Source</h2>
-            <p class="section-subtitle" style="margin:0 auto; text-align:center;">From fitness equipment to home goods — we source across the categories UK and Pakistani importers need most.</p>
+            <p class="section-subtitle" style="margin:0 auto; text-align:center;">From fitness equipment to home goods — we source across the categories UK, GCC, and Pakistani importers need most.</p>
         </div>
         <div class="industries-grid">
             <div class="industry-card fade-in">
@@ -2416,7 +2556,7 @@
             <p class="section-subtitle" style="margin:0 auto; text-align:center;">We are a new business — client results coming soon. Here is what we are building towards.</p>
         </div>
         <div class="coming-soon-banner fade-in">
-            <p>🚀 <strong>Kiyani Sourcing is now taking its first clients.</strong><br>Be one of our founding clients and your experience will be featured here. <a href="#contact" style="color: var(--red); text-decoration:none; font-weight:600;">Get in touch today →</a></p>
+            <p>🚀 <strong>Kiyani Sourcing is now taking its first clients.</strong><br>Be one of our founding clients across the UK, GCC, or Pakistan — and your experience will be featured here. <a href="#contact" style="color: var(--red); text-decoration:none; font-weight:600;">Get in touch today →</a></p>
         </div>
     </div>
 </section>
@@ -2428,7 +2568,7 @@
             <div>
                 <div class="section-tag">FAQ</div>
                 <h2 class="section-title">Common Questions</h2>
-                <p class="section-subtitle" style="margin-bottom:40px;">Everything UK and Pakistani importers typically want to know before working with us.</p>
+                <p class="section-subtitle" style="margin-bottom:40px;">Everything UK, GCC, and Pakistani importers typically want to know before working with us.</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
@@ -2437,6 +2577,15 @@
                         </div>
                         <div class="faq-answer">
                             <p>Alibaba shows you listings — we show you reality. We physically visit factories, verify their operations, and negotiate in person. You get verified suppliers and someone who can spot problems before they become your problem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>How do I pay Kiyani Sourcing?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer secure payment through our UAE bank account as well as our Chinese company bank account. Most UK, Pakistani, and GCC clients prefer paying through our UAE channel for added security and ease of international transfer.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -2459,20 +2608,11 @@
                     </div>
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
-                            <h4>Do you serve Pakistani importers as well as UK buyers?</h4>
+                            <h4>Do you serve GCC and Pakistani importers as well as UK buyers?</h4>
                             <div class="faq-toggle"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes — this is one of our core strengths. We understand Pakistani import culture and business expectations, as well as UK Amazon FBA and retail standards. We serve both markets simultaneously.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFaq(this)">
-                            <h4>How do I get started?</h4>
-                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Send us a WhatsApp message or fill in the contact form below. Tell us your product, target price, and quantity. We will respond within 48 hours with a clear plan and fee structure.</p>
+                            <p>Yes — this is one of our core strengths. We hold UAE residency and a Dubai bank account for GCC buyers. We have deep roots in Pakistan and understand Pakistani import culture. We serve all three markets with equal expertise.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -2481,7 +2621,7 @@
                             <div class="faq-toggle"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes — this is a key service we offer. We are based in Guangzhou where Canton Fair takes place. We can guide you through the fair, arrange factory visits, translate, and negotiate on your behalf.</p>
+                            <p>Yes — this is a key service we offer. We are based in Guangzhou where Canton Fair takes place. We can guide UK, Pakistani, and GCC traders through the fair, arrange factory visits, translate, and negotiate on your behalf.</p>
                         </div>
                     </div>
                 </div>
@@ -2491,12 +2631,12 @@
                     <i class="fab fa-whatsapp"></i>
                     <h3>Still Have Questions?</h3>
                     <p>Send us a WhatsApp message right now. Raja responds personally — no assistants, no delays.</p>
-                    <a href="https://wa.me/971528908747" target="_blank" class="btn-primary" style="justify-content:center; display:flex;">
+                    <a href="https://wa.me/447775412819" target="_blank" class="btn-primary" style="justify-content:center; display:flex;">
                         <i class="fab fa-whatsapp"></i>
                         Chat on WhatsApp
                     </a>
                     <br>
-                    <p style="font-size:12px; color:rgba(255,255,255,0.3); margin:0;">+971 52 890 8747 · tradewithkiyani@gmail.com</p>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.3); margin:0;">+44 7775 412819 · tradewithkiyani@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -2512,11 +2652,11 @@
                 <h2>Let's Start Sourcing Together</h2>
                 <p>Tell us what you need. We'll respond within 48 hours with a clear plan, transparent pricing, and no obligation.</p>
                 <div class="contact-methods">
-                    <a href="https://wa.me/971528908747" target="_blank" class="contact-method">
+                    <a href="https://wa.me/447775412819" target="_blank" class="contact-method">
                         <div class="contact-method-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="contact-method-text">
-                            <span>WhatsApp (Preferred)</span>
-                            <strong>+971 52 890 8747</strong>
+                            <span>WhatsApp — Preferred</span>
+                            <strong>+44 7775 412819</strong>
                         </div>
                     </a>
                     <a href="mailto:tradewithkiyani@gmail.com" class="contact-method">
@@ -2529,8 +2669,15 @@
                     <div class="contact-method">
                         <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-method-text">
-                            <span>Location</span>
-                            <strong>Guangzhou, China</strong>
+                            <span>Primary Base</span>
+                            <strong>Guangzhou, China 🇨🇳</strong>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-method-icon"><i class="fas fa-university"></i></div>
+                        <div class="contact-method-text">
+                            <span>Payment Channel</span>
+                            <strong>UAE Bank Account Available 🇦🇪</strong>
                         </div>
                     </div>
                 </div>
@@ -2542,13 +2689,19 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>Your Name *</label>
-                            <input type="text" placeholder="John Smith" required>
+                            <input type="text" placeholder="Your full name" required>
                         </div>
                         <div class="form-group">
                             <label>Your Country *</label>
                             <select required>
                                 <option value="" disabled selected>Select country</option>
                                 <option>United Kingdom</option>
+                                <option>United Arab Emirates</option>
+                                <option>Saudi Arabia</option>
+                                <option>Qatar</option>
+                                <option>Kuwait</option>
+                                <option>Oman</option>
+                                <option>Bahrain</option>
                                 <option>Pakistan</option>
                                 <option>Other</option>
                             </select>
@@ -2561,7 +2714,7 @@
                         </div>
                         <div class="form-group">
                             <label>WhatsApp Number</label>
-                            <input type="tel" placeholder="+44 7700 000000">
+                            <input type="tel" placeholder="+44 / +971 / +92">
                         </div>
                     </div>
                     <div class="form-group">
@@ -2599,10 +2752,10 @@
                 <div class="logo-icon">KS</div>
                 <div class="logo-text">
                     <span>Kiyani Sourcing</span>
-                    <span>Guangzhou, China</span>
+                    <span>Guangzhou · Dubai · Pakistan</span>
                 </div>
             </a>
-            <p>Your trusted China sourcing agent based in Guangzhou. Serving UK and Pakistani importers with factory verification, quality control, and Canton Fair guidance.</p>
+            <p>Your trusted China sourcing agent. Registered company in Guangzhou, UAE residency and banking access, deep roots in Pakistan. Serving UK, GCC, and Pakistani importers worldwide.</p>
         </div>
         <div class="footer-col">
             <h5>Services</h5>
@@ -2615,41 +2768,41 @@
             </ul>
         </div>
         <div class="footer-col">
-            <h5>Company</h5>
+            <h5>Markets</h5>
             <ul class="footer-links">
+                <li><a href="#markets">United Kingdom 🇬🇧</a></li>
+                <li><a href="#markets">GCC & UAE 🇦🇪</a></li>
+                <li><a href="#markets">Pakistan 🇵🇰</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#industries">Industries</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h5>Contact</h5>
             <ul class="footer-links">
-                <li><a href="https://wa.me/971528908747">WhatsApp Us</a></li>
+                <li><a href="https://wa.me/447775412819">WhatsApp Us</a></li>
                 <li><a href="mailto:tradewithkiyani@gmail.com">Email Us</a></li>
                 <li><a href="#canton-fair">Canton Fair 2025</a></li>
+                <li><a href="#contact">Get a Quote</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
         <p>© 2025 Kiyani Sourcing. All rights reserved. Founded by Raja Shumail Ali Kiyani.</p>
-        <p>Built for serious importers · <a href="mailto:tradewithkiyani@gmail.com">tradewithkiyani@gmail.com</a></p>
+        <p>Guangzhou 🇨🇳 · Dubai 🇦🇪 · Pakistan 🇵🇰 · <a href="mailto:tradewithkiyani@gmail.com">tradewithkiyani@gmail.com</a></p>
     </div>
 </footer>
 
 <!-- ─── WHATSAPP FLOAT ─── -->
 <div class="whatsapp-float">
     <div class="whatsapp-tooltip">Chat with Raja on WhatsApp</div>
-    <a href="https://wa.me/971528908747" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <a href="https://wa.me/447775412819" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </div>
 
 <!-- ─── JAVASCRIPT ─── -->
 <script>
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
@@ -2659,13 +2812,11 @@
         }
     });
 
-    // Mobile menu toggle
     function toggleMenu() {
         const menu = document.getElementById('mobileMenu');
         menu.classList.toggle('open');
     }
 
-    // FAQ accordion
     function toggleFaq(element) {
         const item = element.parentElement;
         const isOpen = item.classList.contains('open');
@@ -2673,7 +2824,6 @@
         if (!isOpen) item.classList.add('open');
     }
 
-    // Scroll animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -2684,7 +2834,6 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Form submit
     function submitForm(e) {
         e.preventDefault();
         const btn = e.target.querySelector('.form-submit');
