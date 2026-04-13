@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kiyani Sourcing — Your trusted China sourcing agent based in Guangzhou. Serving UK and Pakistani importers with factory verification, quality control, and Canton Fair guidance.">
+    <title>Kiyani Sourcing | Your Eyes on the Ground in China</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --red: #CC0000;
+            --red-dark: #AA0000;
+            --red-light: #ff1a1a;
+            --black: #0a0a0a;
+            --dark: #111111;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --grey: #888888;
+            --light-grey: #f5f5f5;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ─── SCROLLBAR ─── */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--red);
+            border-radius: 3px;
+        }
+
+        /* ─── NAVBAR ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(10, 10, 10, 0.97);
+            padding: 14px 0;
+            box-shadow: 0 2px 30px rgba(204, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(204, 0, 0, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--red);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            color: var(--white);
+            letter-spacing: -1px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text span:first-child {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .logo-text span:last-child {
+            font-size: 11px;
+            color: var(--red);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .nav-cta {
+            background: var(--red) !important;
+            color: var(--white) !important;
+            padding: 10px 22px !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+            transition: var(--transition) !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--red-dark) !important;
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(204,0,0,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(204,0,0,0.08) 0%, transparent 50%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(204,0,0,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(204,0,0,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(204,0,0,0.12);
+            border: 1px solid rgba(204,0,0,0.3);
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge i {
+            font-size: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero-title {
+            font-size: clamp(36px, 5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-title .accent {
+            color: var(--red);
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 480px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--red);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+            border: 2px solid var(--red);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+            border-color: var(--red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(204,0,0,0.35);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--red);
+            color: var(--red);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 6px;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        /* Hero Right — Visual Card */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red), transparent);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .card-avatar {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--red), var(--red-dark));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .card-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .card-info p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .card-info .location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--red);
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .card-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .card-feature:hover {
+            border-color: rgba(204,0,0,0.3);
+            background: rgba(204,0,0,0.05);
+        }
+
+        .card-feature-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(204,0,0,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .card-feature-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .card-feature-sub {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            margin-top: 2px;
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: -16px;
+            right: 30px;
+            background: var(--red);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 30px rgba(204,0,0,0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* ─── TRUST BAR ─── */
+        .trust-bar {
+            background: var(--dark-2);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 20px 0;
+        }
+
+        .trust-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        .trust-item i {
+            color: var(--red);
+            font-size: 14px;
+        }
+
+        /* ─── SECTION STYLES ─── */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--red);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-tag::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        /* ─── ABOUT ─── */
+        .about {
+            background: var(--dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-block {
+            position: relative;
+        }
+
+        .about-photo-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--dark-2);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: rgba(255,255,255,0.25);
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-photo-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red), transparent);
+        }
+
+        .about-photo-placeholder i {
+            font-size: 60px;
+            color: rgba(255,255,255,0.1);
+        }
+
+        .about-location-tag {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(10,10,10,0.9);
+            border: 1px solid rgba(204,0,0,0.3);
+            border-radius: 10px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-location-tag i {
+            color: var(--red);
+            font-size: 18px;
+        }
+
+        .about-location-tag span {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .about-location-tag small {
+            display: block;
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .about-content h2 {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 36px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .highlight-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(204,0,0,0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .highlight-text h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .highlight-text p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ─── SERVICES ─── */
+        .services {
+            background: var(--black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+            padding: 36px 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: rgba(204,0,0,0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-card.featured {
+            border-color: rgba(204,0,0,0.35);
+            background: linear-gradient(135deg, rgba(204,0,0,0.08), var(--dark-2));
+        }
+
+        .service-card.featured::after {
+            transform: scaleX(1);
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(204,0,0,0.12);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 22px;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .service-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .service-features li i {
+            color: var(--red);
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        /* ─── HOW IT WORKS ─── */
+        .how-it-works {
+            background: var(--dark);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--red), var(--red), transparent);
+            opacity: 0.3;
+        }
+
+        .step-item {
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--dark-2);
+            border: 2px solid rgba(204,0,0,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--red);
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .step-item:hover .step-number {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .step-item h3 {
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .step-item p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+        }
+
+        /* ─── WHY CHOOSE US ─── */
+        .why-us {
+            background: var(--black);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 14px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            border-color: rgba(204,0,0,0.25);
+            transform: translateX(6px);
+        }
+
+        .why-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(204,0,0,0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .why-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+
+        .why-visual {
+            position: relative;
+        }
+
+        .why-big-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-big-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--red);
+        }
+
+        .big-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(204,0,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 44px;
+            color: var(--red);
+        }
+
+        .why-big-card h3 {
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .why-big-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .why-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .metric {
+            background: rgba(255,255,255,0.04);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--red);
+            letter-spacing: -1px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            margin-top: 4px;
+        }
+
+        /* ─── CANTON FAIR ─── */
+        .canton-fair {
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .canton-fair::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(204,0,0,0.08) 0%, transparent 60%);
+        }
+
+        .canton-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .canton-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .canton-content h2 {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .canton-content p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .canton-services {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .canton-service-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .canton-service-item:hover {
+            border-color: rgba(204,0,0,0.3);
+            background: rgba(204,0,0,0.05);
+        }
+
+        .canton-service-item i {
+            color: var(--red);
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .canton-visual-card {
+            background: linear-gradient(135deg, rgba(204,0,0,0.15), rgba(204,0,0,0.05));
+            border: 1px solid rgba(204,0,0,0.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .canton-icon-big {
+            font-size: 80px;
+            margin-bottom: 24px;
+            display: block;
+            line-height: 1;
+        }
+
+        .canton-visual-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .canton-visual-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .canton-dates {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .canton-date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .canton-date .phase {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .canton-date .date {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        /* ─── INDUSTRIES ─── */
+        .industries {
+            background: var(--black);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .industry-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 14px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .industry-card:hover {
+            border-color: rgba(204,0,0,0.3);
+            transform: translateY(-4px);
+            background: rgba(204,0,0,0.05);
+        }
+
+        .industry-emoji {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .industry-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .industry-card p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.5;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials {
+            background: var(--dark);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+            padding: 32px 28px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(204,0,0,0.2);
+            transform: translateY(-4px);
+        }
+
+        .quote-icon {
+            font-size: 40px;
+            color: rgba(204,0,0,0.2);
+            line-height: 1;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--red), var(--red-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .author-info h5 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .author-info span {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .stars {
+            color: #FFB800;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .coming-soon-banner {
+            text-align: center;
+            padding: 40px;
+            background: rgba(204,0,0,0.05);
+            border: 1px dashed rgba(204,0,0,0.25);
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .coming-soon-banner p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .coming-soon-banner strong {
+            color: var(--red);
+        }
+
+        /* ─── FAQ ─── */
+        .faq {
+            background: var(--black);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.open {
+            border-color: rgba(204,0,0,0.25);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            gap: 16px;
+        }
+
+        .faq-question h4 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .faq-toggle {
+            width: 28px;
+            height: 28px;
+            background: rgba(204,0,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 12px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-item.open .faq-toggle {
+            background: var(--red);
+            color: var(--white);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+        }
+
+        .faq-cta-box {
+            background: linear-gradient(135deg, rgba(204,0,0,0.15), rgba(204,0,0,0.05));
+            border: 1px solid rgba(204,0,0,0.25);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: sticky;
+            top: 100px;
+        }
+
+        .faq-cta-box i {
+            font-size: 48px;
+            color: var(--red);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .faq-cta-box h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .faq-cta-box p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        /* ─── CONTACT ─── */
+        .contact {
+            background: var(--dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            border-color: rgba(204,0,0,0.3);
+            transform: translateX(4px);
+        }
+
+        .contact-method-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(204,0,0,0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-method-text span {
+            display: block;
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .contact-method-text strong {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Contact Form */
+        .contact-form-box {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .contact-form-box h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-box p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 14px 16px;
+            color: var(--white);
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--red);
+            background: rgba(204,0,0,0.05);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.25);
+        }
+
+        .form-group select option {
+            background: var(--dark-2);
+            color: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-submit:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(204,0,0,0.35);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--dark-2);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.7;
+            margin-top: 16px;
+            max-width: 280px;
+        }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.55);
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .footer-bottom a {
+            color: var(--red);
+            text-decoration: none;
+        }
+
+        /* ─── WHATSAPP BUTTON ─── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .whatsapp-tooltip {
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--white);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .whatsapp-btn {
+            width: 62px;
+            height: 62px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            animation: wa-pulse 3s ease-in-out infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.55);
+        }
+
+        .whatsapp-btn i {
+            font-size: 28px;
+            color: var(--white);
+        }
+
+        @keyframes wa-pulse {
+            0%, 100% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 6px 50px rgba(37, 211, 102, 0.7); }
+        }
+
+        /* ─── MOBILE MENU ─── */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10,10,10,0.98);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--red);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 70px 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 100px 24px 60px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-grid,
+            .why-grid,
+            .canton-grid,
+            .faq-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .steps-grid::before {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-container {
+                padding: 0 24px;
+            }
+
+            .nav-container {
+                padding: 0 24px;
+            }
+
+            .trust-bar-inner {
+                padding: 0 24px;
+                gap: 16px;
+            }
+
+            .trust-item {
+                font-size: 12px;
+            }
+
+            .footer-bottom {
+                padding: 20px 24px 0;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                justify-content: center;
+            }
+
+            .contact-form-box {
+                padding: 28px 24px;
+            }
+
+            .why-big-card {
+                padding: 28px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .industries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-delay-1 { transition-delay: 0.1s; }
+        .fade-in-delay-2 { transition-delay: 0.2s; }
+        .fade-in-delay-3 { transition-delay: 0.3s; }
+        .fade-in-delay-4 { transition-delay: 0.4s; }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <div class="logo-icon">KS</div>
+            <div class="logo-text">
+                <span>Kiyani Sourcing</span>
+                <span>Guangzhou, China</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#canton-fair">Canton Fair</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="#canton-fair" onclick="toggleMenu()">Canton Fair</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+    <a href="#contact" onclick="toggleMenu()">Get a Quote</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-container">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <i class="fas fa-circle"></i>
+                Live & Based in Guangzhou, China
+            </div>
+            <h1 class="hero-title">
+                Your Eyes on<br>the Ground
+                <span class="accent">in China.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Kiyani Sourcing connects UK and Pakistani importers with verified Chinese manufacturers. Factory visits, quality control, and supplier negotiation — done by someone physically on the ground.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Start Sourcing Today
+                </a>
+                <a href="#services" class="btn-secondary">
+                    <i class="fas fa-arrow-right"></i>
+                    View Services
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">UK</div>
+                    <div class="stat-label">Amazon FBA & TikTok Shop Sellers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">PK</div>
+                    <div class="stat-label">Pakistani Importers & Traders</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">GZ</div>
+                    <div class="stat-label">Physically Based in Guangzhou</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="card-header">
+                    <div class="card-avatar">RS</div>
+                    <div class="card-info">
+                        <h3>Raja Shumail Ali Kiyani</h3>
+                        <p>Founder & China Sourcing Agent</p>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Guangzhou, China
+                        </div>
+                    </div>
+                </div>
+                <div class="card-features">
+                    <div class="card-feature">
+                        <div class="card-feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <div class="card-feature-text">Supplier Search & Vetting</div>
+                            <div class="card-feature-sub">3 shortlisted factories per product</div>
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <div class="card-feature-text">Quality Control Inspections</div>
+                            <div class="card-feature-sub">Pre-shipment verification on your behalf</div>
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <div class="card-feature-text">Supplier Negotiation</div>
+                            <div class="card-feature-sub">Face-to-face, in Mandarin</div>
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div>
+                            <div class="card-feature-text">Canton Fair Guidance</div>
+                            <div class="card-feature-sub">Tours, introductions & factory visits</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-badge">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp-First Service
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── TRUST BAR ─── -->
+<div class="trust-bar">
+    <div class="trust-bar-inner">
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            Physically Based in Guangzhou
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            Serving UK & Pakistani Importers
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            No Supplier Commissions — Ever
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            WhatsApp Direct Access
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            Canton Fair Specialist
+        </div>
+    </div>
+</div>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+    <div class="section-container">
+        <div class="about-grid">
+            <div class="about-image-block fade-in">
+                <div class="about-photo-placeholder">
+                    <i class="fas fa-user"></i>
+                    <span>Photo Coming Soon</span>
+                </div>
+                <div class="about-location-tag">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>Guangzhou, China</span>
+                        <small>On the ground — right now</small>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="section-tag">About Us</div>
+                <h2>The Sourcing Agent Who's Actually There</h2>
+                <p>
+                    Most sourcing agents operate remotely — they browse Alibaba, send emails, and hope for the best. Kiyani Sourcing is different. I'm Raja Shumail Ali Kiyani, and I'm physically based in Guangzhou, China — the manufacturing capital of the world.
+                </p>
+                <p>
+                    That means I can walk into factories, inspect products with my own hands, negotiate face-to-face with suppliers, and represent your business interests the way only someone on the ground can.
+                </p>
+                <p>
+                    I serve both UK importers and Pakistani traders — understanding the expectations of both markets in a way that very few agents can offer.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item fade-in fade-in-delay-1">
+                        <div class="highlight-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="highlight-text">
+                            <h4>Physically in Guangzhou</h4>
+                            <p>No remote sourcing. I visit factories, attend fairs, and verify suppliers in person.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item fade-in fade-in-delay-2">
+                        <div class="highlight-icon"><i class="fas fa-globe"></i></div>
+                        <div class="highlight-text">
+                            <h4>Dual Market Expert</h4>
+                            <p>Deep understanding of both UK buyer expectations and Pakistani import culture.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item fade-in fade-in-delay-3">
+                        <div class="highlight-icon"><i class="fas fa-comments"></i></div>
+                        <div class="highlight-text">
+                            <h4>WhatsApp-First Communication</h4>
+                            <p>Direct access to me — no ticket systems, no call centres, no delays.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section class="services" id="services">
+    <div class="section-container">
+        <div class="section-header">
+            <div class="section-tag">What We Offer</div>
+            <h2 class="section-title">Services Built for Serious Importers</h2>
+            <p class="section-subtitle">From first supplier search to pre-shipment quality check — everything handled on the ground in Guangzhou.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <h3>Supplier Search & Shortlist</h3>
+                <p>We find and vet three qualified factories per product — so you compare real options, not Alibaba listings.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> Factory background checks</li>
+                    <li><i class="fas fa-circle"></i> MOQ and pricing comparison</li>
+                    <li><i class="fas fa-circle"></i> 3 vetted options delivered</li>
+                    <li><i class="fas fa-circle"></i> Flat fee from £150</li>
+                </ul>
+            </div>
+            <div class="service-card fade-in fade-in-delay-1">
+                <div class="service-icon"><i class="fas fa-box"></i></div>
+                <h3>Sample Coordination</h3>
+                <p>We order, inspect, and forward product samples to your UK or Pakistan address — before you commit to a full order.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> Sample ordering & payment</li>
+                    <li><i class="fas fa-circle"></i> Physical sample inspection</li>
+                    <li><i class="fas fa-circle"></i> International forwarding</li>
+                    <li><i class="fas fa-circle"></i> From £100 + courier costs</li>
+                </ul>
+            </div>
+            <div class="service-card featured fade-in fade-in-delay-2">
+                <div class="service-tag">Most Popular</div>
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Quality Control Inspection</h3>
+                <p>Pre-shipment factory inspections — we check your goods before they leave China, so problems don't travel with your cargo.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> Physical product checking</li>
+                    <li><i class="fas fa-circle"></i> Detailed photo & video report</li>
+                    <li><i class="fas fa-circle"></i> Pass / fail recommendation</li>
+                    <li><i class="fas fa-circle"></i> £150–£250 per factory visit</li>
+                </ul>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Full Order Management</h3>
+                <p>We handle everything — supplier negotiation, order placement, production follow-up, and shipping coordination.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> End-to-end management</li>
+                    <li><i class="fas fa-circle"></i> Face-to-face negotiation</li>
+                    <li><i class="fas fa-circle"></i> Freight forwarder intro</li>
+                    <li><i class="fas fa-circle"></i> 5–8% of order value</li>
+                </ul>
+            </div>
+            <div class="service-card fade-in fade-in-delay-1">
+                <div class="service-icon"><i class="fas fa-tag"></i></div>
+                <h3>Private Label Development</h3>
+                <p>Launching your own brand from China? We coordinate packaging design, branding, and private label production.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> Packaging coordination</li>
+                    <li><i class="fas fa-circle"></i> Brand label development</li>
+                    <li><i class="fas fa-circle"></i> Factory print management</li>
+                    <li><i class="fas fa-circle"></i> Custom quote</li>
+                </ul>
+            </div>
+            <div class="service-card fade-in fade-in-delay-2">
+                <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Monthly Sourcing Retainer</h3>
+                <p>For regular buyers who want a dedicated sourcing partner on the ground — managing ongoing supplier relationships month to month.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-circle"></i> Priority WhatsApp access</li>
+                    <li><i class="fas fa-circle"></i> Ongoing supplier management</li>
+                    <li><i class="fas fa-circle"></i> Monthly activity reports</li>
+                    <li><i class="fas fa-circle"></i> £500–£1,500/month</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section class="how-it-works" id="how-it-works">
+    <div class="section-container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag" style="justify-content:center; display:flex;">How It Works</div>
+            <h2 class="section-title" style="text-align:center;">From Enquiry to Delivery</h2>
+            <p class="section-subtitle" style="margin:0 auto; text-align:center;">A simple, transparent process — no surprises, no hidden steps.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-item fade-in">
+                <div class="step-number">1</div>
+                <h3>Send Your Brief</h3>
+                <p>WhatsApp or email us your product idea, target price, and quantity. We respond within a few hours.</p>
+            </div>
+            <div class="step-item fade-in fade-in-delay-1">
+                <div class="step-number">2</div>
+                <h3>We Source & Vet</h3>
+                <p>We physically visit and shortlist three verified factories. You receive a clear comparison report.</p>
+            </div>
+            <div class="step-item fade-in fade-in-delay-2">
+                <div class="step-number">3</div>
+                <h3>Sample & Approve</h3>
+                <p>Samples are ordered, inspected by us, and forwarded to you. You approve before any bulk order.</p>
+            </div>
+            <div class="step-item fade-in fade-in-delay-3">
+                <div class="step-number">4</div>
+                <h3>Order & Ship</h3>
+                <p>We manage production, carry out pre-shipment QC, and coordinate shipping to your door.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─── -->
+<section class="why-us" id="why-us">
+    <div class="section-container">
+        <div class="why-grid">
+            <div class="why-content">
+                <div>
+                    <div class="section-tag">Why Kiyani Sourcing</div>
+                    <h2 class="section-title">What Makes Us Different</h2>
+                    <p class="section-subtitle">Anyone can find a factory on Alibaba. What you're paying for is trust, verification, and someone who has your back on the ground.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4>Physically Present in Guangzhou</h4>
+                        <p>We don't source remotely. We walk into factories, meet suppliers face-to-face, and check goods with our own hands.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in fade-in-delay-1">
+                    <div class="why-card-icon"><i class="fas fa-users"></i></div>
+                    <div>
+                        <h4>Dual Market Understanding</h4>
+                        <p>We understand UK buyer standards and Pakistani importer needs equally — rare for any single sourcing agent.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in fade-in-delay-2">
+                    <div class="why-card-icon"><i class="fas fa-ban"></i></div>
+                    <div>
+                        <h4>No Supplier Commissions</h4>
+                        <p>We never take kickbacks from factories. Our only loyalty is to you. That is why buyers trust us.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in fade-in-delay-3">
+                    <div class="why-card-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <h4>WhatsApp-First Communication</h4>
+                        <p>Direct access to Raja — not an assistant, not a ticketing system. Real answers, fast.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-visual fade-in">
+                <div class="why-big-card">
+                    <div class="big-icon">🇨🇳</div>
+                    <h3>Based Where It Matters</h3>
+                    <p>Guangzhou is the manufacturing and trading capital of China. Being here means faster factory access, better supplier relationships, and real-time problem solving — not remote guesswork.</p>
+                    <div class="why-metrics">
+                        <div class="metric">
+                            <div class="metric-number">£5K+</div>
+                            <div class="metric-label">Minimum order size we work with</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number">48hr</div>
+                            <div class="metric-label">Average response to new enquiries</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number">2</div>
+                            <div class="metric-label">Markets served — UK & Pakistan</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number">0</div>
+                            <div class="metric-label">Supplier commissions — ever</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CANTON FAIR ─── -->
+<section class="canton-fair" id="canton-fair">
+    <div class="section-container">
+        <div class="canton-inner">
+            <div class="canton-grid">
+                <div class="canton-content fade-in">
+                    <div class="section-tag">Canton Fair</div>
+                    <h2>Coming to Canton Fair? You Need Someone Already There.</h2>
+                    <p>The Canton Fair is the world's largest trade fair — held in Guangzhou twice a year. For Pakistani and UK traders attending or planning to attend, navigating it alone is overwhelming. We offer on-the-ground guidance, factory introductions, and full sourcing support throughout.</p>
+                    <div class="canton-services">
+                        <div class="canton-service-item">
+                            <i class="fas fa-route"></i>
+                            Canton Fair floor tours and product category guidance
+                        </div>
+                        <div class="canton-service-item">
+                            <i class="fas fa-building"></i>
+                            Factory visit arrangements outside the fair
+                        </div>
+                        <div class="canton-service-item">
+                            <i class="fas fa-language"></i>
+                            Translation and negotiation support
+                        </div>
+                        <div class="canton-service-item">
+                            <i class="fas fa-user-tie"></i>
+                            Supplier introductions and vetting
+                        </div>
+                        <div class="canton-service-item">
+                            <i class="fas fa-hotel"></i>
+                            Local logistics guidance (hotels, transport, areas)
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Canton Fair Support
+                    </a>
+                </div>
+                <div class="canton-visual-card fade-in fade-in-delay-2">
+                    <span class="canton-icon-big">🏢</span>
+                    <h3>Canton Fair 2025</h3>
+                    <p>The world's largest trade exhibition — held in Guangzhou, China. Two phases per year, covering every product category imaginable.</p>
+                    <div class="canton-dates">
+                        <div class="canton-date">
+                            <span class="phase">Phase 1 — Spring 2025</span>
+                            <span class="date">Apr 15–19</span>
+                        </div>
+                        <div class="canton-date">
+                            <span class="phase">Phase 2 — Spring 2025</span>
+                            <span class="date">Apr 23–27</span>
+                        </div>
+                        <div class="canton-date">
+                            <span class="phase">Phase 3 — Spring 2025</span>
+                            <span class="date">May 1–5</span>
+                        </div>
+                        <div class="canton-date">
+                            <span class="phase">Autumn Fair 2025</span>
+                            <span class="date">Oct 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── INDUSTRIES ─── -->
+<section class="industries" id="industries">
+    <div class="section-container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag" style="justify-content:center; display:flex;">Industries</div>
+            <h2 class="section-title" style="text-align:center;">Product Categories We Source</h2>
+            <p class="section-subtitle" style="margin:0 auto; text-align:center;">From fitness equipment to home goods — we source across the categories UK and Pakistani importers need most.</p>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-card fade-in">
+                <span class="industry-emoji">💪</span>
+                <h4>Fitness & Recovery</h4>
+                <p>Resistance bands, massage guns, gym accessories, yoga equipment</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-1">
+                <span class="industry-emoji">🐾</span>
+                <h4>Pet Products</h4>
+                <p>Beds, toys, grooming tools, feeding accessories, carriers</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-2">
+                <span class="industry-emoji">🏠</span>
+                <h4>Home Organisation</h4>
+                <p>Storage solutions, kitchen accessories, organisers, décor</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-3">
+                <span class="industry-emoji">🌿</span>
+                <h4>Eco-Friendly Goods</h4>
+                <p>Sustainable packaging, bamboo products, reusable items</p>
+            </div>
+            <div class="industry-card fade-in">
+                <span class="industry-emoji">🎁</span>
+                <h4>Gifts & Novelty</h4>
+                <p>Seasonal gifts, promotional items, branded merchandise</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-1">
+                <span class="industry-emoji">👗</span>
+                <h4>Fashion & Accessories</h4>
+                <p>Clothing, bags, jewellery, fashion accessories</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-2">
+                <span class="industry-emoji">📱</span>
+                <h4>Consumer Electronics</h4>
+                <p>Phone accessories, gadgets, tech products, cables</p>
+            </div>
+            <div class="industry-card fade-in fade-in-delay-3">
+                <span class="industry-emoji">🧴</span>
+                <h4>Beauty & Personal Care</h4>
+                <p>Skincare tools, hair accessories, personal grooming products</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonials" id="testimonials">
+    <div class="section-container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag" style="justify-content:center; display:flex;">Testimonials</div>
+            <h2 class="section-title" style="text-align:center;">What Clients Say</h2>
+            <p class="section-subtitle" style="margin:0 auto; text-align:center;">We are a new business — client results coming soon. Here is what we are building towards.</p>
+        </div>
+        <div class="coming-soon-banner fade-in">
+            <p>🚀 <strong>Kiyani Sourcing is now taking its first clients.</strong><br>Be one of our founding clients and your experience will be featured here. <a href="#contact" style="color: var(--red); text-decoration:none; font-weight:600;">Get in touch today →</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+    <div class="section-container">
+        <div class="faq-grid">
+            <div>
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-subtitle" style="margin-bottom:40px;">Everything UK and Pakistani importers typically want to know before working with us.</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>How is Kiyani Sourcing different from using Alibaba directly?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Alibaba shows you listings — we show you reality. We physically visit factories, verify their operations, and negotiate in person. You get verified suppliers and someone who can spot problems before they become your problem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Do you take commissions from suppliers?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Never. We are paid by you — our client — only. Taking supplier commissions creates a conflict of interest and we refuse to operate that way. Our fee structure is fully transparent and agreed upfront.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>What is the minimum order size you work with?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We typically work with buyers placing orders of £5,000 to £100,000. Smaller discovery work — like supplier searches and sample coordination — can be arranged for any buyer ready to pay the flat fee.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Do you serve Pakistani importers as well as UK buyers?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes — this is one of our core strengths. We understand Pakistani import culture and business expectations, as well as UK Amazon FBA and retail standards. We serve both markets simultaneously.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>How do I get started?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Send us a WhatsApp message or fill in the contact form below. Tell us your product, target price, and quantity. We will respond within 48 hours with a clear plan and fee structure.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h4>Can you help with Canton Fair visits?</h4>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes — this is a key service we offer. We are based in Guangzhou where Canton Fair takes place. We can guide you through the fair, arrange factory visits, translate, and negotiate on your behalf.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="faq-cta-box fade-in">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Still Have Questions?</h3>
+                    <p>Send us a WhatsApp message right now. Raja responds personally — no assistants, no delays.</p>
+                    <a href="https://wa.me/971528908747" target="_blank" class="btn-primary" style="justify-content:center; display:flex;">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                    <br>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.3); margin:0;">+971 52 890 8747 · tradewithkiyani@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact" id="contact">
+    <div class="section-container">
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <div class="section-tag">Contact</div>
+                <h2>Let's Start Sourcing Together</h2>
+                <p>Tell us what you need. We'll respond within 48 hours with a clear plan, transparent pricing, and no obligation.</p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/971528908747" target="_blank" class="contact-method">
+                        <div class="contact-method-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-method-text">
+                            <span>WhatsApp (Preferred)</span>
+                            <strong>+971 52 890 8747</strong>
+                        </div>
+                    </a>
+                    <a href="mailto:tradewithkiyani@gmail.com" class="contact-method">
+                        <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-method-text">
+                            <span>Email</span>
+                            <strong>tradewithkiyani@gmail.com</strong>
+                        </div>
+                    </a>
+                    <div class="contact-method">
+                        <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-method-text">
+                            <span>Location</span>
+                            <strong>Guangzhou, China</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-box fade-in fade-in-delay-2">
+                <h3>Get a Free Quote</h3>
+                <p>Fill in your details and we will get back to you within 48 hours.</p>
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Country *</label>
+                            <select required>
+                                <option value="" disabled selected>Select country</option>
+                                <option>United Kingdom</option>
+                                <option>Pakistan</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp Number</label>
+                            <input type="tel" placeholder="+44 7700 000000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Service You Need *</label>
+                        <select required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option>Supplier Search & Shortlist</option>
+                            <option>Sample Coordination</option>
+                            <option>Quality Control Inspection</option>
+                            <option>Full Order Management</option>
+                            <option>Canton Fair Support</option>
+                            <option>Monthly Sourcing Retainer</option>
+                            <option>Not sure — I need advice</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tell Us About Your Product *</label>
+                        <textarea placeholder="What product are you looking to source? Approximate quantity and target price? Any specific requirements?" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="#" class="nav-logo" style="text-decoration:none;">
+                <div class="logo-icon">KS</div>
+                <div class="logo-text">
+                    <span>Kiyani Sourcing</span>
+                    <span>Guangzhou, China</span>
+                </div>
+            </a>
+            <p>Your trusted China sourcing agent based in Guangzhou. Serving UK and Pakistani importers with factory verification, quality control, and Canton Fair guidance.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Services</h5>
+            <ul class="footer-links">
+                <li><a href="#services">Supplier Search</a></li>
+                <li><a href="#services">Sample Coordination</a></li>
+                <li><a href="#services">Quality Control</a></li>
+                <li><a href="#services">Order Management</a></li>
+                <li><a href="#canton-fair">Canton Fair</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Company</h5>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Contact</h5>
+            <ul class="footer-links">
+                <li><a href="https://wa.me/971528908747">WhatsApp Us</a></li>
+                <li><a href="mailto:tradewithkiyani@gmail.com">Email Us</a></li>
+                <li><a href="#canton-fair">Canton Fair 2025</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Kiyani Sourcing. All rights reserved. Founded by Raja Shumail Ali Kiyani.</p>
+        <p>Built for serious importers · <a href="mailto:tradewithkiyani@gmail.com">tradewithkiyani@gmail.com</a></p>
+    </div>
+</footer>
+
+<!-- ─── WHATSAPP FLOAT ─── -->
+<div class="whatsapp-float">
+    <div class="whatsapp-tooltip">Chat with Raja on WhatsApp</div>
+    <a href="https://wa.me/971528908747" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('open');
+    }
+
+    // FAQ accordion
+    function toggleFaq(element) {
+        const item = element.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form submit
+    function submitForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('.form-submit');
+        btn.innerHTML = '<i class="fas fa-check"></i> Enquiry Sent!';
+        btn.style.background = '#25D366';
+        setTimeout(() => {
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Enquiry';
+            btn.style.background = '';
+            e.target.reset();
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
